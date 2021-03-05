@@ -11,7 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <PersonList />
+        <PersonList people={this.state.people} />
       </div>
     );
   }

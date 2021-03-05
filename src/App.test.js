@@ -30,4 +30,9 @@ describe("App", () => {
   it("State Has 'People' Property", () => {
     expect(state.people).toBeDefined();
   });
+
+  it("Check If PersonList Component's Props Are 'People' State Being Passed Down", () => {
+    const personList = appWrapper.find(PersonList);
+    expect(personList.props().people).toEqual(appWrapper.state().people);
+  });
 });

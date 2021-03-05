@@ -18,11 +18,17 @@ describe("App", () => {
     expect(personList).toHaveLength(1);
   });
 
-  it("", () => {
+  it("App Component Has State", () => {
     const appWrapper = shallow(<App />);
     const state = appWrapper.state();
 
     // We can write an assertion, to expect that our components state is or is not null
     expect(state).not.toBeNull();
+  });
+
+  it("State Has 'People' Property", () => {
+    const appWrapper = shallow(<App />);
+    const state = appWrapper.state();
+    expect(state.people).toBeDefined();
   });
 });

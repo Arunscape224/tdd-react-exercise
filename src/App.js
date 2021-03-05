@@ -4,7 +4,9 @@ import PersonList from "./PersonList";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      people: []
+    };
   }
   render() {
     return (

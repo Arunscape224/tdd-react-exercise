@@ -12,8 +12,10 @@ describe("App", () => {
   });
 
 
-  it("asdsa", () => {
+  it("Renders A Person List", () => {
     const appWrapper = shallow(<App />);
-    appWrapper.find(PersonList)
+    const personList = appWrapper.find(PersonList)
+    //  We can check for the occurances of Person List within the App component as an array 
+    expect(personList).toHaveLength(1);
   })
 });

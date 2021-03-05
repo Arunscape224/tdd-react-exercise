@@ -11,11 +11,18 @@ describe("App", () => {
     const appWrapper = shallow(<App />);
   });
 
-
   it("Renders A Person List", () => {
     const appWrapper = shallow(<App />);
-    const personList = appWrapper.find(PersonList)
-    //  We can check for the occurances of Person List within the App component as an array 
+    const personList = appWrapper.find(PersonList);
+    //  We can check for the occurances of Person List within the App component as an array
     expect(personList).toHaveLength(1);
-  })
+  });
+
+  it("", () => {
+    const appWrapper = shallow(<App />);
+    const state = appWrapper.state();
+
+    // We can write an assertion, to expect that our components state is or is not null
+    expect(state).not.toBeNull();
+  });
 });
